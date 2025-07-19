@@ -1,0 +1,63 @@
+nav {
+    background: var(--color-bg2);
+}
+
+
+.grade {
+    background: var(--color-primary);
+    margin-top: 5rem;
+}
+
+.grade__container {
+    display: flex;
+    gap: 1.5rem;
+    height: 60vh;
+}
+
+.grades {
+    
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    background: var(--color-bg1);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.footer {
+    background: var(--color-bg2);
+    padding-top: 5rem;
+}
+.footer__container {
+    display: flex;
+    margin-left: 7rem;
+}
+.footer__container > div h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer__1 {
+    margin: 0 0 2rem;
+}
+
+.footer ul li {
+    margin-bottom: 0.7rem;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.footer__copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-bg);
+}

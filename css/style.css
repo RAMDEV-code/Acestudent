@@ -33,8 +33,8 @@
 
 body{
     line-height: 1.7;
-    color: var(--color-bg);
-    background: var(--color-white);
+    color: var(--color-black);
+    background: var(--color-bg);
 }
 .container{
     width: var(--container-width-lg);
@@ -162,6 +162,7 @@ ul li ul.dropdown {
     position: absolute;
     z-index: 999;
     display: none;
+    box-shadow: 3px 4px 10px var(--color-bg2), -3px -4px 10px var(--color-bg2);
 }
 
 ul li:hover ul.dropdown {
@@ -176,74 +177,80 @@ ul li:hover ul.dropdown {
 
 
 
-/* ==========================================HEADER=========================================== */
+/* ======================HEADER============= */
 
 header {
-     background-color: rgba(197, 196, 209, 0.7);
+    background-color: rgba(197, 196, 209, 0.7);
     position: relative;
     overflow: hidden;
-    height: 70vh;
-    margin-bottom: 5rem;
-    background: hsl(40%, 25%, 41%);
+    height: 72vh;
+    background-color: hsl(40%, 25%, 41%);
 }
 
 .header__container {
-    
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 5rem;
-    height: 100%;
 }
 .header__left p {
     margin: 1rem 0 2.4rem;
 }
-/* ========================================ADVERT 1================================================== */
 
-.advert {
-    background: var(--color-white);
-    position: relative;
-    top: 5rem;
-    overflow: hidden;
-    height: 70vh;
-}
+/* ========ADVERT 1============== */
+
 .advert__container {
-       display: grid;
+    background-color: hsl(240, 26%, 43%);
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5rem;
-    height: 100%;
+    gap: 2rem;
+    text-align: center;
+    height: 400px;
+    padding: 1rem;
 }
 
-/* ============================================ADVERT 2============================================== */
-
-.advert2 {
-    background: var(--color-white);
+.advert__left {
     position: relative;
     top: 5rem;
-    overflow: hidden;
-    height: 70vh;
-    margin-bottom: 5rem;
 }
+
+
+.advert__right img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+/* ======ADVERT 2========== */
 
 .advert2__container {
-       display: grid;
+    background-color: hsl(209, 34%, 46%);
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     gap: 5rem;
-    height: 100%;
+    width: auto;
+    text-align: center;
+   
+
+    max-height: 50%;
+}
+
+.advert2__right {
+    position: relative;
+    bottom: 4rem;
+}
+
+.advert2__left {
+    position: relative;
+    top: 8rem;
 }
 
 
 
 
 
-
-
-
-/* ========================================== CATEGORIES =========================================== */
+/* ============= CATEGORIES ======== */
 .categories {
-    background: var(--color-white);
+    background-color: hsl(240, 59%, 85%);
     height: 32rem;
 }
 
@@ -295,9 +302,10 @@ header {
     font-size: 1rem;
 }
 
-/* ========================================== POPULAR COURSES =========================================== */
+/* ======== POPULAR COURSES ====== */
 
 .courses {
+    background-color: hsl(240, 59%, 85%);
     margin-top: 10rem;
 }
 
@@ -328,10 +336,10 @@ header {
 }
 
 
-/* ============================================= ABOUT =========================================== */
+/* =========== ABOUT ============ */
 
 .about {
-    background-color: var(--color-white);
+     background-color: hsl(240, 59%, 85%);
 }
 
 .about h1 {
@@ -350,10 +358,10 @@ header {
 }
 
 
-/* ============================================= FOOTER =========================================== */
+/* ======== FOOTER =========== */
 
 .footer {
-    background: var(--color-white);
+    background: var(--color-primary);
     color: var(--color-bg1);
     padding-top: 5rem;
 }
@@ -393,7 +401,7 @@ header {
     border-top: 1px solid var(--color-bg);
 }
 
-/* ============================================= MEDIA QUERIES (tablets)  =========================================== */
+/* ======= MEDIA QUERIES (tablets)  =========== */
 
 @media screen and (max-width: 1024px) {
     .container {
@@ -419,7 +427,7 @@ header {
 
 
    
- /*========================================NAVBAR===========================================================================*/
+ /*=============NAVBAR===========================*/
 nav button {
     display: inline-block;
     background: transparent;
@@ -460,39 +468,49 @@ nav button#close-menu-btn {
     color: var(--color-white);
 }
 
-/*===============================================HEADER===========================================================================*/
+/*=======================HEADER===========================================================================*/
 
 header {
-    height: 63vh;
-    margin-bottom: 4rem
+    height: 45vh;
+    overflow: hidden;
 }
 .header__container {
     gap: 0;
-    padding-bottom: 3rem;
 }
 
-/*======================ADVERT==============*/
+/*======================ADVERT ==============*/
 
-.advert {
-    height: 63vh;
-}
+
 .advert__container {
-    gap: 0;
-    padding-bottom: 3rem;
+     height: 400px;
 }
 
-/*======================ADVERT==============*/
-.advert2 {
-    height: 63vh;
-    margin-bottom: 4rem
+.advert__right img {
+    margin: 5rem;
+    margin-left: 1rem;
 }
+
+
+
+
+
+
+/*======================ADVERT 2==============*/
+
 .advert2__container {
-    gap: 0;
-    padding-bottom: 3rem;
+     height: 400px;
+}
+.advert2__right {
+    margin-top: 7rem;
+}
+
+.advert2__left {
+    margin-bottom: 5rem;
+    margin-right: 3rem;
 }
 
 
-/*===============================================CATEGORIES===========================================================================*/
+/*============CATEGORIES==============*/
 .categories {
     height: auto;
 }
@@ -505,7 +523,11 @@ header {
 .categories__left {
     margin-right: 0;
 }
-/*===============================================Popular subjects===========================================================================*/
+
+
+
+
+/*======Popular subjects================*/
 
 .courses {
     margin-top: 0;
@@ -516,7 +538,7 @@ header {
 }
 
 
-/*===============================================FOOTER===========================================================================*/
+/*=========FOOTER================*/
 .footer__container {
     grid-template-columns: 1fr 1fr;
 
@@ -525,21 +547,28 @@ header {
 
 
 
-/*===============================================MEDIA QUERIES (PHONES)===========================================================================*/
+
+
+/*===========================MEDIA QUERIES (PHONES)==========================*/
 
 @media screen and (max-width:600px) {
     .container {
         width: var(--container-width-sm);
     }
 
-/*===============================================NAVBAR===========================================================================*/
+
+
+/*=======NAVBAR===================*/
 
 .nav__menu {
     right: 3%;
 }
-/*===============================================HEADER===========================================================================*/
+
+
+
+/*======HEADER=========*/
 header {
-    height: 100vh;
+    height: 93vh;
 }
 
 .header__container {
@@ -554,43 +583,38 @@ header {
 }
 
 
-/*======================ADVERT==============*/
 
-.advert {
-    height: 100vh;
-}
+
+/*===========ADVERT ==============*/
 
 .advert__container {
+    height: auto;
     grid-template-columns: 1fr;
-    text-align: center;
-    margin-top: 0;
 }
 
-
-.advert__left p {
-    margin-bottom: 1.3rem;
-}
-
-
-/*======================ADVERT2==============*/
-
-
-.advert2 {
-    height: 100vh;
-}
+/*=================ADVERT 2==============*/
 
 .advert2__container {
     grid-template-columns: 1fr;
-    text-align: center;
-    margin-top: 0;
+    height: auto;
+    padding: 1rem;
+}
+
+.advert2__left {
+
+    margin-bottom: 10rem;
+}
+
+.advert2__right {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
 }
 
 
-.advert2__left p {
-    margin-bottom: 1.3rem;
-}
 
-/*======================CATEGORIES==============*/
+/*====================CATEGORIES==============*/
 
 .categories__right {
     grid-template-columns: 1fr 1fr;
@@ -605,12 +629,18 @@ header {
     margin-top: 4px;
     display: inline-block;
 }
-/*===============================================POPULAR COURSES===========================================================================*/
+
+
+
+
+/*=========POPULAR COURSES===============*/
 .courses__container {
     grid-template-columns: 1fr;
 }
 
-/*===============================================ABOUT===========================================================================*/
+
+
+/*============ABOUT===================*/
 
 .about__container {
     grid-template-columns: 1fr;
@@ -619,7 +649,10 @@ header {
     margin-bottom: 0;
 }
 
-/*===============================================FOOTER===========================================================================*/
+
+
+
+/*===FOOTER=========================*/
 .footer__container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -630,15 +663,4 @@ header {
 .footer__socials {
     justify-content: center;
 }
-
-
-
-
-
-
-
-/*===============================================HEADER===========================================================================*/
-
-
-
 }

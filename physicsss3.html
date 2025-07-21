@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Academy</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/JSS1.css">
+
+
+
+ <!--================IONICON=================-->
+
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<style>
+  /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #2c2f5e;
+  color: #fff;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Redesigned and Animated Subject Header */
+.subject-header {
+  background: linear-gradient(135deg, #4a4df7, #35386b);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInSlide 1s ease forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.subject-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  animation: slideUp 0.8s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInSlide {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+  .subject-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .subject-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .subject-header {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .subject-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Redesigned Term Section */
+.term-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.term {
+  background-color: #35386b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.term:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.term h2 {
+  color: #ff5b5b;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #ff5b5b;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.term ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.term ul li a {
+  display: block;
+  padding: 0.8rem 1rem;
+  border: 1px solid #5558a2;
+  border-radius: 8px;
+  background-color: #2f3262;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+
+.term ul li a:hover {
+  background-color: #474caf;
+  border-color: #5d61e7;
+  padding-left: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .term h2 {
+    font-size: 1.5rem;
+  }
+  .term ul li a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .term-section {
+    padding: 1.5rem 1rem;
+    gap: 1.2rem;
+  }
+
+  .term {
+    padding: 1rem;
+  }
+
+  .term h2 {
+    font-size: 1.3rem;
+  }
+
+  .term ul li a {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+
+
+    <!--=================NAVBAR==================-->
+    <nav>
+        <div class="container nav__container">
+            <a href="/index.html"><h4>ACESTUDENTS</h4></a>
+            <ul class="nav__menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/class.html">Class<ion-icon name="caret-down-outline"></ion-icon></a>
+                <ul class="dropdown">
+                    <li><a href="JSS1.html">JSS1</a></li>
+                    <li><a href="JSS2.html">JSS2</a></li>
+                    <li><a href="JSS3.html">JSS3</a></li>
+                    <li><a href="SS1.html">SS1</a></li>
+                    <li><a href="SS2.html">SS2</a></li>
+                    <li><a href="SS3.html">SS3</a></li>
+                </ul>
+            </li>
+                <li><a href="/About.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+            <button id="open-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+            <button id="close-menu-btn"><ion-icon name="close-outline"></ion-icon></button>
+        </div>
+    </nav>
+
+    <!--=============END OF NAVBAR============-->
+  <header class="subject-header">
+    <h1>PHYSICS</h1>
+  </header>
+
+  <main class="term-section">
+    <section class="term">
+  <h2>First Term</h2>
+  <ul>
+    <li><a href="physicsfirst.html">Week 1: Introduction to Physics</a></li>
+    <li><a href="#">Week 2: Motion</a></li>
+    <li><a href="#">Week 3: Matter</a></li>
+    <li><a href="#">Week 4: Measurement</a></li>
+    <li><a href="#">Week 5: Density</a></li>
+    <li><a href="#">Week 6: Heat Transfer</a></li>
+    <li><a href="#">Week 7: Pressure</a></li>
+    <li><a href="#">Week 8: Energy</a></li>
+    <li><a href="#">Week 9: Sound</a></li>
+    <li><a href="#">Week 10: Revision</a></li>
+  </ul>
+</section>
+
+
+    <section class="term">
+  <h2>Second Term</h2>
+  <ul>
+    <li><a href="physicsfirst.html">Week 1: Introduction to Physics</a></li>
+    <li><a href="#">Week 2: Motion</a></li>
+    <li><a href="#">Week 3: Matter</a></li>
+    <li><a href="#">Week 4: Measurement</a></li>
+    <li><a href="#">Week 5: Density</a></li>
+    <li><a href="#">Week 6: Heat Transfer</a></li>
+    <li><a href="#">Week 7: Pressure</a></li>
+    <li><a href="#">Week 8: Energy</a></li>
+    <li><a href="#">Week 9: Sound</a></li>
+    <li><a href="#">Week 10: Revision</a></li>
+  </ul>
+</section>
+
+<section class="term">
+  <h2>Third Term</h2>
+  <ul>
+    <li><a href="physicsfirst.html">Week 1: Introduction to Physics</a></li>
+    <li><a href="#">Week 2: Motion</a></li>
+    <li><a href="#">Week 3: Matter</a></li>
+    <li><a href="#">Week 4: Measurement</a></li>
+    <li><a href="#">Week 5: Density</a></li>
+    <li><a href="#">Week 6: Heat Transfer</a></li>
+    <li><a href="#">Week 7: Pressure</a></li>
+    <li><a href="#">Week 8: Energy</a></li>
+    <li><a href="#">Week 9: Sound</a></li>
+    <li><a href="#">Week 10: Revision</a></li>
+  </ul>
+</section>
+  </main>
+
+<!--===================END OF LESSONS======================-->
+
+    <footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h4>ACE ACADEMY</h4></a>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatibus?
+            </p>
+        </div>
+
+        <div class="footer__2">
+            <h4>Permalinks</h4>
+            <ul class="permalinks">
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="class.html">Class</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+             </ul>
+        </div>
+          
+        <div class="footer__3">
+            <h4>Primacy</h4>
+            <ul class="privacy">
+                <li><a href="privacy.html">Privacy policy</a></li>
+                <li><a href="privacy.html">Terms & conditions</a></li>
+                <li><a href="privacy.html">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__4">
+            <h4>Contact Us</h4>
+            <p>
+                +234 7057927515
+            </p>
+            <P>
+                Aceacdemy1@gmail.com
+            </P>
+          <ul class="footer__socials">
+               <li><a href="fabook.html"><ion-icon name="logo-facebook"></ion-icon></a></li>
+               <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+               <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+               <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+               <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="footer__copyright">
+            <small>Copyright &copy; ACE ACADEMY|ONLINE SCHOOL</small>
+        </div>
+</footer>
+
+
+
+
+
+<script src="./main.js"></script>
+
+</body>
+</html>
